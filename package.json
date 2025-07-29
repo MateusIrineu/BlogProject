@@ -15,12 +15,16 @@
   },
   "keywords": [],
   "author": "",
+  "type": "module",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/MateusIrineu/BlogProject/issues"
   },
   "homepage": "https://github.com/MateusIrineu/BlogProject#readme",
   "dependencies": {
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "pg": "^8.16.3",
     "sequelize": "^6.37.7"
   }
 }

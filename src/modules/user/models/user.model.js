@@ -1,4 +1,4 @@
-import sequelize from '../../../config/database';
+import sequelize from '../../../config/database.js';
 import { DataTypes } from 'sequelize';
 
 const UserModel = sequelize.define(
@@ -59,9 +59,11 @@ const UserModel = sequelize.define(
             }
         },
 
+    },
+    {
         tableName: 'User',
-        createdAt: 'Created_at',
-        updateAt: 'Updated_at'
+        createddAt: 'Created_at',
+        updatedAt: 'Updated_at'
     }
 );
 
