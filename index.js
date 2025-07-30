@@ -1,5 +1,6 @@
 import express from 'express';
-import routeUser from "./src/modules/user/routes/produto.route.js";
+import routeUser from "./src/modules/user/routes/user.route.js";
+import routePerfil from "./src/modules/perfil/routes/perfil.route.js";
 import dotenv from 'dotenv';
 
 import './src/config/database.js';
@@ -10,7 +11,8 @@ const app = express();
 const port = process.env.PORTA
 
 app.use(express.json());
-app.use(routeUser)
+app.use(routeUser);
+app.use(routePerfil);
 
 app.listen(port, async () => {
     try {
