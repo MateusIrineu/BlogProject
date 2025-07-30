@@ -1,3 +1,4 @@
+import bcrypt from 'bcryptjs';
 import UserModel from "../models/user.model.js";
 
 class UserController {
@@ -8,7 +9,10 @@ class UserController {
                 return res.status(400).json({ message: 'Erro do cliente.' })
             }
 
-            const user = await UserModel.create({ nome, email, senha, foto_perfil })
+            const salt = await bcrypt.genSaltSync(10);
+            const hash = await bcrypt.hash(senha, salt)
+
+            const user = await UserModel.create({ nome, email, senha:hash, foto_perfil })
             res.status(201).json({ message: 'Usuário criado com sucesso!', user: user })
 
         } catch (error) {

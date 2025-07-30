@@ -43,7 +43,6 @@ const UserModel = sequelize.define(
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
-                min: 8,
                 notEmpty: {
                     msg: 'The password mught be filled.'
                 } 
@@ -60,9 +59,10 @@ const UserModel = sequelize.define(
         },
 
     },
+
     {
         tableName: 'User',
-        createddAt: 'Created_at',
+        createdAt: 'Created_at',
         updatedAt: 'Updated_at'
     }
 );

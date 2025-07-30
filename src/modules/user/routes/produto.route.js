@@ -16,7 +16,7 @@ router.get("/usuarios", UserController.ListarTodos);
 router.patch("/usuario/atualizar/:id", UserController.atualizar);
 
 // DELETAR USUÁRIO POR ID
-router.delete("/usuario/delete/:id", UserController.deletarPorId);
+router.delete("/usuario/deletar/:id", UserController.deletarPorId);
 
 // DELETAR TODOS OS USUÁRIOS
 router.delete("/usuarios/deletar", UserController.deletarTodos);
