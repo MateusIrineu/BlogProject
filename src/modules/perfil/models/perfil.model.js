@@ -1,5 +1,5 @@
 import { DataTypes } from 'sequelize';
-import { sequelize } from '../../../config/database.js';
+import  sequelize  from '../../../config/database.js';
 
 const PerfilModel = sequelize.define(
     "Profile",
@@ -15,7 +15,7 @@ const PerfilModel = sequelize.define(
             allowNull: false,
             unique: true,
             references: {
-                model: 'User', // Assuming the User model is defined elsewhere
+                model: 'User',
                 key: 'id'
             }
         },
